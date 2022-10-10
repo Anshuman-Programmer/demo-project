@@ -1,0 +1,67 @@
+
+@import "../../base";
+
+.header{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    height: 100px;
+
+    .logo{
+        margin-right: 4rem;
+        color: $white;
+        font-family: 'Lora', serif;
+        font-weight: 400;
+        font-size: 2rem;
+    }
+
+    .links{
+
+        display: flex;
+        align-items: center;
+        list-style: none;
+        flex: 1;
+
+        .link{
+            margin-right: 2rem;
+            color: $white;
+            position: relative;
+            cursor: pointer;
+            transition: all 200ms ease-in-out;
+        }
+
+        .active{
+            background: $linearGradient;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            font-weight: 600;
+        }
+
+        .active::after{
+            content: "";
+            background-color: $white;
+            position: absolute;
+            width: 25px;
+            height: 3px;
+            bottom: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 999rem;
+        }
+
+    }
+
+    .button{
+        outline: none;
+        border: none;
+        padding: 10px 24px;
+        border-radius: 5px;
+        background: $linearGradient;
+        font-size: 16px;
+        color: white;
+        font-weight: 400;
+    }
+
+}
