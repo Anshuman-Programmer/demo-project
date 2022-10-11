@@ -13,7 +13,7 @@ const Header = () => {
   return (
     <nav className={styles.header}>
       <h3 className={styles.logo}>
-        Anshuman
+        HashGreed
       </h3>
       <ul className={styles.links}>
         <li id="home" className={`${styles.link} ${activeNav === "home" && styles.active}`} onClick={handleClick}>Home</li>

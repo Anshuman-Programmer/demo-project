@@ -1,0 +1,172 @@
+@import "../../base";
+
+.hero {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  min-height: calc(100vh - 100px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  .left {
+    width: 60%;
+    .heading {
+      color: $white;
+      font-size: clamp(32px, 4vw, 80px);
+    }
+    .paragraph {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      width: 60%;
+      color: $white;
+      font-size: 1rem;
+    }
+
+    .leftButton {
+      margin-right: 1rem;
+      color: $white;
+      width: 150px;
+      height: 50px;
+      overflow: hidden;
+      background: $linearGradient;
+      font-size: 0.8rem;
+      font-weight: 500;
+      clip-path: polygon(
+        0% 30%,
+        20% 0,
+        100% 0,
+        100% 30%,
+        100% 70%,
+        80% 100%,
+        10% 100%,
+        0% 100%,
+        0% 30%
+      );
+      box-shadow: inset 0 0 10px #ff6fc9;
+    }
+    .rightButton {
+      color: $white;
+      width: 150px;
+      height: 50px;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.08);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(0.5px);
+      -webkit-backdrop-filter: blur(0.5px);
+      font-size: 0.6rem;
+      font-weight: 500;
+      clip-path: polygon(
+        0 0,
+        0 0,
+        80% 0,
+        100% 30%,
+        100% 100%,
+        20% 100%,
+        0% 70%,
+        0% 0%
+      );
+    }
+    .imageWrapper {
+      display: flex;
+      align-items: center;
+      .image {
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: -1rem;
+      }
+    }
+
+    .follower {
+      color: $white;
+      margin-left: 5rem;
+    }
+  }
+
+  .heroImage {
+    width: clamp(32px, 30vw, 300px);
+    min-width: 100px;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 10px;
+    .left {
+      width: 100%;
+      margin-bottom: 2rem;
+      .heading {
+        color: $white;
+        font-size: clamp(32px, 5vw, 80px);
+      }
+      .paragraph {
+        width: 70%;
+      }
+
+      .leftButton {
+        margin-right: 1rem;
+        color: $white;
+        width: 150px;
+        height: 50px;
+        overflow: hidden;
+        background: $linearGradient;
+        font-size: 0.8rem;
+        font-weight: 500;
+        clip-path: polygon(
+          0% 30%,
+          20% 0,
+          100% 0,
+          100% 30%,
+          100% 70%,
+          80% 100%,
+          10% 100%,
+          0% 100%,
+          0% 30%
+        );
+        box-shadow: inset 0 0 10px #ff6fc9;
+      }
+      .rightButton {
+        color: $white;
+        width: 150px;
+        height: 50px;
+        overflow: hidden;
+        background: rgba(255, 255, 255, 0.08);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(0.5px);
+        -webkit-backdrop-filter: blur(0.5px);
+        font-size: 0.6rem;
+        font-weight: 500;
+        clip-path: polygon(
+          0 0,
+          0 0,
+          80% 0,
+          100% 30%,
+          100% 100%,
+          20% 100%,
+          0% 70%,
+          0% 0%
+        );
+      }
+      .imageWrapper {
+        display: none;
+      }
+
+      .follower {
+        display: none;
+      }
+    }
+
+    .heroImage {
+      width: clamp(32px, 90vw, 300px);
+      min-width: 100px;
+      max-width: 400px;
+    }
+  }
+}
